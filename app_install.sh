@@ -21,18 +21,20 @@ sudo apt install python3-pip -y
 sudo apt install python3-venv -y
 
 # Xampp
-wget https://downloadsapachefriends.global.ssl.fastly.net/xampp/7.4.30/xampp-linux-x64-7.4.30-0-installer.run
-chmod +x xampp-linux-x64-7.4.30-0-installer.run
-sudo ./xampp-linux-x64-7.4.30-0-installer.run
-echo "How to run XAMPP : sudo /opt/lampp/lampp start"
-echo "Run PHP Server With php -S localhost:8000"
+wget https://sourceforge.net/projects/xampp/files/XAMPP%20Linux/8.2.12/xampp-linux-x64-8.2.12-0-installer.run
+sudo chmod 777 xampp-linux-x64-8.2.12-0-installer.run
+sudo ./xampp-linux-x64-8.2.12-0-installer.run
+
 
 # Krita
 echo "Creative Programs"
 sudo apt install krita
-snap install blender --classic
+sudo snap install blender --classic
 
 # Install Node JsS
 v=20   # set to 4, 5, 6, ... as needed
 curl -sL https://deb.nodesource.com/setup_$v.x | sudo -E bash -
 sudo apt-get install -y nodejs
+
+echo "How to run XAMPP : sudo /opt/lampp/lampp start"
+echo "Run PHP Server With php -S localhost:8000"
