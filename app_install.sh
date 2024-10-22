@@ -28,6 +28,7 @@ sudo ./xampp-linux-x64-8.2.12-0-installer.run
 
 # Krita
 echo "Creative Programs"
+sudo snap install discord
 sudo apt install krita
 sudo snap install blender --classic
 
