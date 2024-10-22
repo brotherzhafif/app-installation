@@ -10,9 +10,6 @@ sudo apt install build-essential cmake -y
 sudo apt install composer -y
 sudo apt install git
 
-v=8   # set to 4, 5, 6, ... as needed
-curl -sL https://deb.nodesource.com/setup_$v.x | sudo -E bash -
-sudo apt-get install -y nodejs
 
 sudo snap install code --classic
 # sudo snap install postman
@@ -34,3 +31,8 @@ echo "Run PHP Server With php -S localhost:8000"
 echo "Creative Programs"
 sudo apt install krita
 snap install blender --classic
+
+# Install Node JsS
+v=20   # set to 4, 5, 6, ... as needed
+curl -sL https://deb.nodesource.com/setup_$v.x | sudo -E bash -
+sudo apt-get install -y nodejs
