@@ -28,7 +28,7 @@ sudo ./xampp-linux-x64-8.2.12-0-installer.run
 
 # Krita
 echo "Creative Programs"
-sudo snap install discord
+# sudo snap install discord
 sudo apt install krita
 sudo snap install blender --classic
 
@@ -39,3 +39,20 @@ sudo apt-get install -y nodejs
 
 echo "How to run XAMPP : sudo /opt/lampp/lampp start"
 echo "Run PHP Server With php -S localhost:8000"
+
+# Vesktop Vencord
+git clone https://github.com/Vencord/Vesktop
+cd Vesktop
+
+# Install Dependencies
+pnpm i
+
+# Either run it without packaging
+pnpm start
+
+# Or package
+pnpm package
+# Or only build the pacman target
+pnpm package --linux pacman
+# Or package to a directory only
+pnpm package:dir
