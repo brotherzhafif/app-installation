@@ -25,24 +25,28 @@ wget https://sourceforge.net/projects/xampp/files/XAMPP%20Linux/8.2.12/xampp-lin
 sudo chmod 777 xampp-linux-x64-8.2.12-0-installer.run
 sudo ./xampp-linux-x64-8.2.12-0-installer.run
 
-
-# Krita
-echo "Creative Programs"
+# echo "Creative Programs"
 # sudo snap install discord
-sudo apt install krita
-sudo snap install blender --classic
+# sudo apt install krita
+# sudo snap install blender --classic
 
 # Install Node JsS
 v=20   # set to 4, 5, 6, ... as needed
 curl -sL https://deb.nodesource.com/setup_$v.x | sudo -E bash -
 sudo apt-get install -y nodejs
 
+# SQLyog
+sudo apt install wine
+wget https://s3.amazonaws.com/SQLyog_Community/SQLyog+13.3.0/SQLyog-13.3.0-0.x64Community.exe
+sudo chmod +x SQLyog-13.3.0-0.x64Community.exe
+wine ./SQLyog-13.3.0-0.x64Community.exe
+
 echo "How to run XAMPP : sudo /opt/lampp/lampp start"
 echo "Run PHP Server With php -S localhost:8000"
 
 # Vesktop Vencord
-git clone https://github.com/Vencord/Vesktop
-cd Vesktop
+wget https://vencord.dev/download/vesktop/arm64/deb
+sudo apt install ./vesktop_1.5.3_arm64.deb
 
 # Install Dependencies
 pnpm i
@@ -50,9 +54,9 @@ pnpm i
 # Either run it without packaging
 pnpm start
 
-# Or package
-pnpm package
-# Or only build the pacman target
-pnpm package --linux pacman
-# Or package to a directory only
-pnpm package:dir
+# # Or package
+# pnpm package
+# # Or only build the pacman target
+# pnpm package --linux pacman
+# # Or package to a directory only
+# pnpm package:dir
