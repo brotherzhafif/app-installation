@@ -1,6 +1,9 @@
 # Updating System
 sudo apt update && sudo apt upgrade -y
 
+# Neessary Tools
+sudo apt install ifupdown
+sudo apt install net-tools
 sudo apt install snapd
 sudo snap install curl
 
@@ -31,11 +34,17 @@ v=20   # set to 4, 5, 6, ... as needed
 curl -sL https://deb.nodesource.com/setup_$v.x | sudo -E bash -
 sudo apt-get install -y nodejs
 
+# DBeaver
+sudo snap install dbeaver-ce
+
+# CasaOS
+curl -fsSL https://get.casaos.io | sudo bash
+
 # SQLyog
-sudo apt install wine
-wget https://s3.amazonaws.com/SQLyog_Community/SQLyog+13.3.0/SQLyog-13.3.0-0.x64Community.exe
-sudo chmod +x SQLyog-13.3.0-0.x64Community.exe
-wine ./SQLyog-13.3.0-0.x64Community.exe
+# sudo apt install wine
+# wget https://s3.amazonaws.com/SQLyog_Community/SQLyog+13.3.0/SQLyog-13.3.0-0.x64Community.exe
+# sudo chmod +x SQLyog-13.3.0-0.x64Community.exe
+# wine ./SQLyog-13.3.0-0.x64Community.exe
 
 echo "How to run XAMPP : sudo /opt/lampp/lampp start"
 echo "Run PHP Server With php -S localhost:8000"
